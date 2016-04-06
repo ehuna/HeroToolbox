@@ -3,7 +3,7 @@ os: Visual Studio 2015
 version: 0.4.{build}
 
 install:
-- ps: .\Source\Scripts\CI.InstallSystemPrereqs.ps1
+- ps: .\src\Scripts\CI.InstallSystemPrereqs.ps1
 
 build_script:
 - ps: .\CI Build
