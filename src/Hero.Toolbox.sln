@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hero.Toolbox.Common.Pcl", "Hero.Toolbox.Common.Pcl\Hero.Toolbox.Common.Pcl.csproj", "{D05ADC7E-1E97-43FF-A4AD-F3419C6EE1F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hero.Toolbox.Tests.Unit", "..\Hero.Toolbox.Tests.Unit\Hero.Toolbox.Tests.Unit.csproj", "{E6D6D67F-5EE9-4137-AD17-83B108827A37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hero.Toolbox.Tests.Unit", "Hero.Toolbox.Tests.Unit\Hero.Toolbox.Tests.Unit.csproj", "{E6D6D67F-5EE9-4137-AD17-83B108827A37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
