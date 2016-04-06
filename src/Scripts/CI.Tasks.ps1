@@ -87,6 +87,6 @@ Task Pull -description "Pulls the latest source from master to the local repo." 
     exec { git pull origin master }
 }
 
-Task Push -depends Pull,Full -description "Performs pre-push actions before actually pushing to the remote repo." {
+Task Push -depends Pull -description "Performs pre-push actions before actually pushing to the remote repo." {
     exec { git push }
 }
