@@ -21,7 +21,7 @@ Task Default -depends Build
 
 Task InstallDependencies -description "Installs all dependencies required to execute the tasks in this script." {
     exec { 
-        cinst xunit         --version 2.1.0  --confirm
+        cinst xunit         --version 2.0.0  --confirm
     }
 }
 
