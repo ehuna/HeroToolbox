@@ -1,0 +1,7 @@
+version: 0.4.{build}
+
+before_build:
+- cmd: nuget restore src/Hero.Toolbox.sln
+
+build:
+  verbosity: minimal
