@@ -41,17 +41,22 @@ function Run-Tests {
 
     $currentDir = Get-Location
     Set-Location $ArtifactsPath
+
+	Write-Host "Running OpenCover, generated the HTML Coverage Report..." -NoNewline
     exec { . $openCoverPath -target:$xUnitPath -targetargs:$TestDlls -returntargetcode -register:user -output:$openCoverOutputPath -filter:'+[Hero.Toolbox.Common.Pcl]*' }
+
     Set-Location $currentDir
 
     if ($CodeCoveragePercentageRequired) {
         $reportGeneratorPath       = Join-Path $PackagesPath 'ReportGenerator.2.4.4.0\tools\ReportGenerator.exe'
         $reportGeneratorOutputPath = Join-Path $ArtifactsPath 'CoverageReport'
 
+		Write-Host "Running ReportGenerator, generated the XML Coverage Report..." -NoNewline
         exec { . $reportGeneratorPath $openCoverOutputPath $reportGeneratorOutputPath }
 
         $coverallsPath = Join-Path $PackagesPath 'coveralls.io.1.3.4\tools\coveralls.net.exe'
 
+		Write-Host "Publishing XML Coverage Report to coveralls.io..." -NoNewline
         exec { . $coverallsPath --opencover $openCoverOutputPath }
 
         # Check the percentage:
